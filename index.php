@@ -1,5 +1,38 @@
 <?php
+$host = '127.0.0.1:3306'; // адрес сервера 
+$database = 'detalization'; // имя базы данных
+$user = 'root'; // имя пользователя
+$password = ''; // пароль
 
+// подключаемся к серверу
+$link = mysqli_connect($host, $user, $password, $database) 
+    or die("Ошибка " . mysqli_error($link));
+ 
+
+$query = 'SELECT * FROM prices_table';
+$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+
+
+
+function printProducts($id, $products, $client_name, $address, $summ, $additional, $status, $lol) {
+if ($status == 0){
+echo '<tr class="info">';
+}else if ($status == 1){
+echo '<tr class="success">';
+}else {
+echo '<tr class="danger">';
+}
+
+echo '<td>'.$products.'</td>';
+echo '<td>'.$client_name.'</td>';
+echo '<td>'.$address.'</td>';
+echo '<td>'.$summ.'</td>';
+echo '<td>'.$additional.'</td>';
+echo '<td>'.$status.'</td>';
+echo '<td>'.$lol.'</td>';
+echo '</tr>';
+}
+mysqli_close($link);
 
 ?>
 
@@ -259,6 +292,19 @@
    </div>
 <br>
 <br>
+	<div class="table">
+   	<table>
+   		<?
+   		if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+printProducts($row['id'], $row['fatt-list'], $row['fatt-hole1'], $row['fatt-hole2'], $row['fatt-hole3'], $row['fatt-hole4'], $row['fatt-hole5'], $row['fatt-hole6']);
+}
+}?>
+   	</table>
+
+   	<table></table>
+   </div>
 </div>
 <script type="text/javascript">
 	$('#osForm').submit(function(e){
