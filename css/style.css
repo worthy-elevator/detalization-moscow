@@ -172,10 +172,7 @@ display: inline-block;
 }
 
 @import url(reset.css);
-body{
-    width: 100%;
-    background: #505050;
-}
+
 .wrapper{
     width: 454px;
     border: 2px solid #fff;
@@ -193,8 +190,7 @@ body{
         margin-bottom: 40px;
     }
         #messegeResult p{
-            color: #fff;
-            font: 400 16px 'PT Sans', sans-serif;
+                        font: 400 16px 'PT Sans', sans-serif;
             padding: 30px 20px;
             text-align: center;
         }
@@ -206,7 +202,6 @@ body{
             height: 50px;
             border-radius: 25px;
             border: none;
-            color: #e8e8e8;
             font: 400 14px 'PT Sans', sans-serif;
         }
 
@@ -215,7 +210,6 @@ body{
             background: url(../img/name.png) no-repeat;
             margin-bottom: 20px;
             padding-left: 60px;
-            color: #e8e8e8;
 
         }
         #telephone{

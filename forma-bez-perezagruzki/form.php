@@ -11,12 +11,9 @@
 if(!empty($_POST['telephone'] ))
 {
 $to = "почта@.ru";
-$from = 'почта@.ru';
 $subject = "Проверка почты";
 $message = 'Имя: '.$_POST['name'].'; Телефон: '.$_POST['telephone'].';';
-$headers = "Content-type: text/html; charset=UTF-8 \r\n";
-$headers .= "From: <почта@.ru>\r\n";
-$result = mail($to, $subject, $message, $headers);
+$result = mail($to, $subject, $message);
 
     if ($result){ 
         echo "<p>Cообщение успешно отправленно. Пожалуйста, оставайтесь на связи</p>";

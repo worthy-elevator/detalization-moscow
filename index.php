@@ -237,12 +237,17 @@
 <br>
 <br>
 
-<div class="form">
+<div class="form" style="border: 1px solid black;
+    border-radius: 5px;
+    padding: 10;">
     <div id="messegeResult">
         <p> Оставьте ваши контакты и наш консультант свяжется с вами </p>
     </div>
        
     <form method="post" action="" id="formMain" name="formMain">
+
+<input type="checkbox" name="Checkbox1" value="Gthyj">
+
         <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" required/>
         <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" required/>
         <input id="button" type="button"  value="Заказать обратный звонок" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
