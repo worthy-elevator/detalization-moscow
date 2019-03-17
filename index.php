@@ -12,9 +12,7 @@
   <meta name="keywords" content="деталь штамповка, деталь штамповка симферополь, деталь заказчик чертеж крым, металлообработка заказ крым, деталь изготовление чертеж, деталь изготовление	крым, деталь заказчик изготовление чертеж, фрезерные работы, услуга металлообработка, металл штамповка, заказ работа токарный крым, работа токарный фрезерный, деталь заказчик чертеж, деталь заказчик изготовление чертеж, металлообработка чертеж	симферополь, листовой металл штамповка симферополь, деталь изготовление чертеж, механический обработка крым, работа токарный фрезерный, деталь изготовление, заказ деталь, услуга металлообработка, токарный заказ, токарная обработка крым, токарная обработка, обработка на токарных станках, токарно фрезерная обработка, токарная обработка металла, токарная обработка деталей, токарная обработка цилиндрических поверхностей, токарная обработка резанием, токарная обработка наружных поверхностей, токарная обработка стали, токарная обработка чпу, токарные работы обработка, обработка поверхностей +на токарных станках, токарная обработка вала, токарно фрезерная обработка деталей, " /> 
   <title>Компас-Деталь</title>
   <link rel="shortcut icon" href="/img/1.ico" type="image/x-icon">
-
-
-          <meta charset="utf-8">
+<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">     
         <title>Simply Carousel Demo 2</title>        
 
@@ -30,7 +28,12 @@
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/carousel.css">
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/prism.js"></script>
+		<script type="text/javascript" src="js/simplycarousel.js"></script>
+		<script type="text/javascript" src="js/script2.js"></script>		
+	</head>		
+
 <script>
     function AjaxFormRequest(result_id,formMain,url) {
                 jQuery.ajax({
