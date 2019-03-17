@@ -12,7 +12,7 @@ if(!empty($_POST['telephone'] ))
 {
 $to = "почта@.ru";
 $from = 'почта@.ru';
-$message = 'Имя: '.$_POST['name'].'; Нажали: '.$_POST['Checkbox1'].'; Телефон: '.$_POST['telephone'].';';
+$message = 'Имя: '.$_POST['name'].'; Нажали: '.$_POST['Checkbox1'].','.$_POST['Checkbox2'].'; Телефон: '.$_POST['telephone'].';';
 $result = mail($to, $subject, $message);
 
     if ($result){ 
