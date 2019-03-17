@@ -16,6 +16,7 @@ while ($i<= 20) {
 	if(isset($_POST[$i])){
 	$string.=$_POST[$i]." ";
 	}
+    $i++;
 }
 $to = "boplkj@yandex.ru";
 $message = 'Имя: '.$_POST['name'].'; Нажали: '.$string.'; Телефон: '.$_POST['telephone'].';';
