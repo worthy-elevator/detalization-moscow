@@ -10,9 +10,18 @@
 <?php
 if(!empty($_POST['telephone'] ))
 {
+
+$i=0;
+$string;
+while ($i<= 20) {
+	if(isset($_POST[$i])){
+	$string.=$_POST[$i]." ";
+	}
+}
+
 $to = "boplkj@yandex.ru";
 
-$message = 'Имя: '.$_POST['name'].'; Нажали: '.$_POST['Checkbox1'].','.$_POST['Checkbox2'].'; Телефон: '.$_POST['telephone'].';';
+$message = 'Имя: '.$_POST['name'].'; Нажали: '.$string.'; Телефон: '.$_POST['telephone'].';';
 $result = mail($to, $subject, $message);
 
     if ($result){ 

@@ -246,8 +246,8 @@
        
     <form method="post" action="" id="formMain" name="formMain">
 
-<input type="checkbox"   name="Checkbox1" id="Checkbox1" value="Gthyj">
-<input type="checkbox"   name="Checkbox2" id="Checkbox2" value="Gthyasdfgj">
+<input type="checkbox"   name="1" id="1" value="Gthyj">
+<input type="checkbox"   name="2" id="2" value="Gthyasdfgj">
 
         <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" required/>
         <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" required/>
