@@ -16,66 +16,66 @@
 <body>
 <div id="body">
 
-	<div class="header" style="background-color: antiquewhite; width: 100vw;">
+	<div class="header">
 
-		<div class="top-line" style="width: 100vw; height: 45px; background-color: blue; position: fixed; top: 0;">
-			<div class="bar-nav-buttons" style="width: 900px; margin: 0 auto;">
-				<div class="nav-mail" style="float: left; padding:10 5;">
+		<div class="top-line" >
+			<div class="bar-nav-buttons" >
+				<div class="nav-mail">
 			        <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
 				</div>
-				<div class="nav-phone" style="float: left; padding:10 5;">
+				<div class="nav-phone" >
 					<a href="mailto:yourmail@gmail ">email: yourmail@gmail </a>
 				</div>
-				<div class="nav-button" style="float: right; padding:10 5;">
+				<div class="nav-button">
 					<a href="#">О компании</a>
 				</div>
-				<div class="nav-button" style="float: right; padding:10 5;">
+				<div class="nav-button" >
 					<a href="#">Выполненые работы</a>
 				</div>
-				<div class="nav-button" style="float: right; padding:10 5;">
+				<div class="nav-button">
 					<a href="#">Контакты</a>	
 				</div>
 			</div>
 		</div>
-		<div class="nav-bar" style="width: 900px; height: 100px;  padding:5 10; margin: 45px auto 0 auto;">
-			<div class="header-label" style="width: 65px; display: inline-block;">
-				<img src="img/logo.png" style="width: 65px; display: inline-block;">
+		<div class="nav-bar" >
+			<div class="header-label" >
+				<img src="img/logo.png" >
 			</div>
-			<div class="header-worktime" style="display: inline-block; width: 210px; margin: 0 10;">
+			<div class="header-worktime" >
 				<p>Режим работы</p>
-				<img src="img/logo.png" style="width: 20px;display: inline-block;">
-				<div class="set-worktime" style="display: inline-block;">
+				<img src="img/logo.png" >
+				<div class="set-worktime" >
 					<p >c восхода и до рассвета</p>
 					<p >c восхода и до рассвета</p>
 				</div>
 			</div>
-			<div class="header-callback" style="display: inline-block; width: 200px; ">
-				<div class="header-callback-button" style="width: 150px; height: 20px; margin:auto; text-align: center;">
+			<div class="header-callback" >
+				<div class="header-callback-button" >
 					<p>Заказать звонок</p>
 				</div>
 			</div>
-			<div class="header-phone-number" style="display: inline-block;">
+			<div class="header-phone-number" >
 				<p>Отдел продаж(Москва):</p>
 			    <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
 			</div>
-			<div class="header-phone-number" style="display: inline-block;">
+			<div class="header-phone-number">
 				<p>По росии:</p>
 			    <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
 			</div>
-			<div class="header-menu" style="position: relative; bottom: -15px; width: 617px; padding: 10; border: 1px solid black; border-radius: 5px; margin:10 auto; background-color: aqua;">
-				<div class="header-menu-button" style="display: inline-block; border-right: 1px solid black; padding:0 15;">
+			<div class="header-menu" >
+				<div class="header-menu-button" >
 					<a href="">обработка</a>
 				</div>
-				<div class="header-menu-button" style="display: inline-block; border-right: 1px solid black; padding:0 15;">
+				<div class="header-menu-button" >
 					<a href="">доработка</a>
 				</div>
-				<div class="header-menu-button" style="display: inline-block; border-right: 1px solid black; padding:0 15;">
+				<div class="header-menu-button" >
 					<a href="">переработка</a>
 				</div>
-				<div class="header-menu-button" style="display: inline-block; border-right: 1px solid black; padding:0 15;">
+				<div class="header-menu-button" >
 					<a href="">выработка</a>
 				</div>
-				<div class="header-menu-button" style="display: inline-block; padding:0 15;">
+				<div class="header-menu-button" >
 					<a href="">издевательство</a>
 				</div>
 			</div>
