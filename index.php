@@ -85,13 +85,28 @@ $wall = $wall->response->items;
 
 	<div class="header">
 
-		<div class="top-line"  style="z-index: 25">
+		<div class="nav-bar" >
+			<img src="img/logo.jpg">
+			<div class="header-label" >
+				<div class="logo-text" style="display: inline-block;">НИТАР</div>
+				<div class="logo-text" style="">Производственная группа</div>
+			</div>
+			<div class="header-phone-number" >
+				<p>Отдел продаж(Москва):</p>
+			    <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
+			</div>
+			<div class="header-phone-number">
+				<p>По росии:</p>
+			    <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
+			</div>
+		</div>
+		<div class="top-line"  style="">
 			<div class="bar-nav-buttons" >
-				<div class="nav-mail">
-			        <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
+				<div class="nav-button">
+					<a href="#">О компании</a>
 				</div>
-				<div class="nav-phone" >
-					<a href="mailto:yourmail@gmail ">email: yourmail@gmail </a>
+				<div class="nav-button">
+					<a href="#">О компании</a>
 				</div>
 				<div class="nav-button">
 					<a href="#">О компании</a>
@@ -104,51 +119,9 @@ $wall = $wall->response->items;
 				</div>
 			</div>
 		</div>
-		<div class="nav-bar" >
-			<div class="header-label" >
-				<img src="img/logo.png" >
-			</div>
-			<div class="header-worktime" >
-				<p>Режим работы</p>
-				<img src="img/logo.png" >
-				<div class="set-worktime" >
-					<p >c восхода и до рассвета</p>
-					<p >c восхода и до рассвета</p>
-				</div>
-			</div>
-			<div class="header-callback" >
-				<div class="header-callback-button" >
-					<p>Заказать звонок</p>
-				</div>
-			</div>
-			<div class="header-phone-number" >
-				<p>Отдел продаж(Москва):</p>
-			    <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
-			</div>
-			<div class="header-phone-number">
-				<p>По росии:</p>
-			    <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
-			</div>
-			<div class="header-menu" style="z-index: 20" >
-				<div class="header-menu-button" >
-					<a href="">обработка</a>
-				</div>
-				<div class="header-menu-button" >
-					<a href="">доработка</a>
-				</div>
-				<div class="header-menu-button" >
-					<a href="">переработка</a>
-				</div>
-				<div class="header-menu-button" >
-					<a href="">выработка</a>
-				</div>
-				<div id="border-none" class="header-menu-button" >
-					<a href="">издевательство</a>
-				</div>
-			</div>
-		</div>
 
 	</div>
+	<!--
 	<div id="main_banner" class="demo">
 				<div class="carousel-slide" style="background: url(&quot;img/image1.jpg&quot;) 50% 50% / cover no-repeat; display: none;">
 					<div class="caption">Simply Carousel</div>
@@ -164,7 +137,7 @@ $wall = $wall->response->items;
 				</div>
 				<span class="arrow left select-none" style="display: none;">&lt;</span>
 				<span class="arrow right select-none" style="display: none;">&gt;</span>
-	</div>
+	</div>-->
 
 	<div class="container">
 		<?
@@ -271,6 +244,7 @@ $wall = $wall->response->items;
 <br>
 <br>
 
+<!--
 <div class="form" style="border: 1px solid black;
     border-radius: 5px;
     padding: 10;">
@@ -286,7 +260,7 @@ $wall = $wall->response->items;
         <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" required/>
         <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" required/>
         <input id="button" type="button"  value="Заказать обратный звонок" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
-    </form>
+    </form>-->
    </div>
 <br>
 <br>

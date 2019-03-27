@@ -59,17 +59,15 @@ a {
 
 .header 
 {
-	background-color: antiquewhite;
 	width: 100%;
 }
 
 .top-line 
 {
 	width: 100vw;
-	height: 45px;
+	height: 40px;
 	background-color: blue;
-	position: fixed;
-	top: 0;
+
 }
 
 .bar-nav-buttons 
@@ -78,98 +76,37 @@ a {
 	margin: 0 auto;
 }
 
-.nav-mail
-{
-	float: left; 
-	padding:10 5;
-}
-
-.nav-phone
-{
-	float: left;
-	padding:10 5;
-}
 
 .nav-button
-{
-float: right;
- padding:10 5;
+{display: inline-block;
+ padding:10 0;
+ width: 19%;
+ text-align: center;
 }
 
 .nav-bar
 {
 width: 900px; 
-height: 100px; 
-padding:5 10; 
-margin: 45px auto 0 auto;
+padding:10 10; 
+margin:  0 auto;
 }
 
 .header-label
 {
-width: 65px; 
 display: inline-block;
 }
 
-.header-label img 
+.nav-bar img 
 {
-	width: 65px;
+	width: 100px;
 	 display: inline-block;
 }
 
-.header-worktime
-{
-display: inline-block;
-width: 210px;
-margin: 0 10;
-}
-
-.header-worktime img 
-{
-width: 20px;
-display: inline-block;
-}
-
-.set-worktime
-{
-display: inline-block;
-}
-
-.header-callback
-{
-	display: inline-block;
-	width: 200px; 
-}
-
-.header-callback-button
-{
-	width: 150px;
-	height: 20px; 
-	margin:auto;
-	text-align: center;
-}
 
 .header-phone-number
 {
 	display: inline-block;
-}
-
-.header-menu
-{
-position: relative;
-bottom: -15px;
-width: 617px;
-padding: 10;
-border: 1px solid black;
-border-radius: 5px;
-margin:10 auto;
-background-color: aqua;
-}
-
-.header-menu-button
-{
-display: inline-block;
- border-right: 1px solid black;
-  padding:0 15;
+    float: right;
 }
 
 @import url(reset.css);
