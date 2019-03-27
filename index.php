@@ -1,38 +1,35 @@
 <?php
-$host = '127.0.0.1:3306'; // адрес сервера 
-$database = 'detalization'; // имя базы данных
-$user = 'root'; // имя пользователя
-$password = ''; // пароль
-
-// подключаемся к серверу
-$link = mysqli_connect($host, $user, $password, $database) 
-    or die("Ошибка " . mysqli_error($link));
+// ID нашего сообщества или страницы вконтакте
+$wall_id="-57846937";
  
+// Удаляем минус у ID групп, что мы используем выше (понадобится для ссылки).
+$group_id = preg_replace("/-/i", "", $wall_id);
+ 
+// Количество записей, которое нам нужно получить.
+$count = "1";
+ 
+// Токен
+$token = "93765754937657549376575420931f3e8d9937693765754cfe53efd24f86d05e31db9b3";
+ 
+// Получаем информацию, подставив все данные выше.
+$api = file_get_contents("https://api.vk.com/api.php?oauth=1&method=wall.get&owner_id={$wall_id}&count={$count}&v=5.58&access_token={$token}");
+// Преобразуем JSON-строку в массив
+$wall = json_decode($api);
+//var_dump($wall);
+ 
+// Получаем массив
+$wall = $wall->response->items;
 
-$query = 'SELECT * FROM prices_table';
-$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
 
-
-
-function printProducts($id, $products, $client_name, $address, $summ, $additional, $status, $lol) {
-if ($status == 0){
-echo '<tr class="info">';
-}else if ($status == 1){
-echo '<tr class="success">';
-}else {
-echo '<tr class="danger">';
+// Обрабатываем данные массива с помощью for и выводим нужные значения
+for ($i = 0; $i < count($wall); $i++) {
+	$a = $wall[$i]->attachments[0]->photo->photo_604;
+	echo '
+	<p>'.$wall[$i]->text.'</p>
+<img src='.$a.'>
+<a href="https://vk.com/wall'.$wall[$i]->from_id.'_'.$wall[$i]->id.'">ТЫКОЙ </a>
+';
 }
-
-echo '<td>'.$products.'</td>';
-echo '<td>'.$client_name.'</td>';
-echo '<td>'.$address.'</td>';
-echo '<td>'.$summ.'</td>';
-echo '<td>'.$additional.'</td>';
-echo '<td>'.$status.'</td>';
-echo '<td>'.$lol.'</td>';
-echo '</tr>';
-}
-mysqli_close($link);
 
 ?>
 
@@ -292,19 +289,6 @@ mysqli_close($link);
    </div>
 <br>
 <br>
-	<div class="table">
-   	<table>
-   		<?
-   		if ($result->num_rows > 0) {
-// output data of each row
-while($row = $result->fetch_assoc()) {
-printProducts($row['id'], $row['fatt-list'], $row['fatt-hole1'], $row['fatt-hole2'], $row['fatt-hole3'], $row['fatt-hole4'], $row['fatt-hole5'], $row['fatt-hole6']);
-}
-}?>
-   	</table>
-
-   	<table></table>
-   </div>
 </div>
 <script type="text/javascript">
 	$('#osForm').submit(function(e){
@@ -321,5 +305,13 @@ printProducts($row['id'], $row['fatt-list'], $row['fatt-hole1'], $row['fatt-hole
      }
     });
 });
+</script>
+	<script type='text/javascript'>
+(function(){ var widget_id = 'Ytpug8MdWW';var d=document;var w=window;function l(){
+  var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+  s.src = '//code.jivosite.com/script/widget/'+widget_id
+    ; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
+  if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
+  else{w.addEventListener('load',l,false);}}})();
 </script>
 </body>
