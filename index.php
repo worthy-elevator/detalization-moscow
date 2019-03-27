@@ -22,14 +22,6 @@ $wall = $wall->response->items;
 
 
 // Обрабатываем данные массива с помощью for и выводим нужные значения
-for ($i = 0; $i < count($wall); $i++) {
-	$a = $wall[$i]->attachments[0]->photo->photo_604;
-	echo '
-	<p>'.$wall[$i]->text.'</p>
-<img src='.$a.'>
-<a href="https://vk.com/wall'.$wall[$i]->from_id.'_'.$wall[$i]->id.'">ТЫКОЙ </a>
-';
-}
 
 ?>
 
@@ -175,6 +167,15 @@ for ($i = 0; $i < count($wall); $i++) {
 	</div>
 
 	<div class="container">
+		<?
+		for ($i = 0; $i < count($wall); $i++) {
+	$a = $wall[$i]->attachments[0]->photo->photo_604;
+	echo '
+	<p>'.$wall[$i]->text.'</p>
+<img src='.$a.'>
+<a href="https://vk.com/wall'.$wall[$i]->from_id.'_'.$wall[$i]->id.'">ТЫКОЙ </a>
+';
+}?>
 		<div class="container-index" style="text-align: center;">
 			<span class="index-up-label">Изготавливаем на заказ</span><br>
 			<span class="index-label">Металлоконструкции</span><br>
