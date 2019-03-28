@@ -135,12 +135,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-	#menu {
-		margin: 20px 25px;
-		float: right;
-		color:#678282;
-		cursor: pointer;
-	}
+
 	#nav {
 		width: 100%;
 		margin: 0;

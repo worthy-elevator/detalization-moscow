@@ -62,12 +62,37 @@ a {
 	width: 100%;
 }
 
+.header-label
+{
+    position: absolute; 
+    padding-left: 7px;
+}
+
+.logo-text
+{
+    display: inline-block; 
+    font-size: 60px;
+}
+
+.split
+{
+    width: 3px; 
+    height: 40px; 
+    background-color: #ee584a; 
+    float: right; 
+    margin-top: 30; 
+    margin-right: 10;
+}
+
 .top-line 
 {
 	width: 100%;
 	height: 40px;
 	background-color: #4f4f4f;
     color: #efefef;
+    position: sticky; 
+    top: -1;
+     z-index: 200;
 }
 
 .bar-nav-buttons 
@@ -112,23 +137,130 @@ display: inline-block;
     margin-right: 10px;
 }
 
+.email-tel
+{
+    float: right;
+}
+
 .container
 {
     width: 900px;
     margin: 0 auto;
 }
 
+.container-first
+{
+    height: 300px; 
+    width: 100%;
+}
+
 .container-left
 {
     width: 40%;
     margin:0;
+    height: 300px;
+    float: left;
 }
+
+.container-menu
+{
+    padding-right: 10;
+}
+
+.container-menu p
+{
+    font-size: 30; margin-bottom: 15px;
+}
+
+.container-menu-button
+{
+    color:#ee584a;
+    width: 100%;
+    border-bottom: 1px solid #efefef;
+    padding:10 0 5 0;
+    margin-bottom: 10;
+}
+
+.container-callback
+{
+    height: 40px; 
+    width: 100%; 
+    background-color: #ee584a; 
+    text-align: center; 
+    color: #efefef; 
+    border-radius: 3px; 
+    padding: 15 0 0 0; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
 
 .container-right
 {
     width: 60%;
     display: inline-block;
     float: right;
+}
+
+.container-right img
+{
+    width:300px; 
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.vk-post
+{
+    position:absolute; 
+    display:inline-block; 
+    max-width:240px; 
+    height:270; 
+    padding:10 10 0 10;
+}
+
+.vk-post h1
+{
+    height:250px; 
+    overflow:hidden;
+}
+
+.vk-post div
+{
+    margin-top:5px; 
+}
+
+.container-index
+{
+    margin-top: 20px; 
+    text-align: center; 
+    width: 900px;
+}
+
+.index-services-3
+{
+    width: 100%; 
+    text-align:center; 
+    margin-top: 10px;
+}
+
+.services-3-img
+{
+    display: inline-block; 
+    position: relative; 
+    width: 275px; 
+    height: 115px; 
+    margin: 25 5;
+}
+
+.services-3-img img
+{
+    width: 100%;
+}
+
+.index-service-label
+{
+    text-align: center; 
+    padding: 10 10; 
+    color: #4f4f4f;
+    background-color: #efefef;
 }
 
 @import url(reset.css);
@@ -205,3 +337,88 @@ display: inline-block;
                 background: linear-gradient(to bottom, #58ce2c 0%,#3fbe10 100%); /* W3C */
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58ce2c', endColorstr='#518d3a',GradientType=0 );
             }
+
+
+@media(max-width: 900px)
+{
+    .nav-bar
+    {
+        width: calc(100% - 20px);
+    }
+    .bar-nav-buttons
+    {
+        width: calc(100% - 20px);
+    }
+    .container
+    {
+        width: calc(100% - 20px);
+    }
+    .container-index
+    {
+        width: calc(100% - 20px);
+    }   
+    .container-right img
+    {
+        width: 55.5%
+    }
+    .mobile-menu
+    {display: block; background-color: #4f4f4f;}
+    .bar-nav-buttons
+    {display: none;}
+    .top-line
+    {height: 70px;}
+    
+
+}
+@media(max-width: 630px)
+{
+    .container-left
+    {
+        display: none;
+    }
+    .container-right
+    {
+        width: 100%
+    }
+    .email-tel
+    {
+    float: unset;
+    height: 50px;
+    }
+    .header-phone-number
+    {
+        float: left;
+        margin-top: 22px;
+    }
+    .split
+    {
+        float: left;
+        margin-top: 10px;
+    }
+    .nav-bar
+    {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 480px)
+{
+    .container-right
+    {
+        float: unset;
+        text-align: center;
+    }
+    .container-first
+    {
+        height: unset;
+    }
+    .vk-post
+    {
+        position: unset;
+        display: block;
+        max-width: unset;
+    }
+    .vk-post h1
+    {height: unset;}
+}
