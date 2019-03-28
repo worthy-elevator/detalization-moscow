@@ -1,6 +1,6 @@
 <?php
 // ID нашего сообщества или страницы вконтакте
-$wall_id="-57846937";
+$wall_id="-30602036";
  
 // Удаляем минус у ID групп, что мы используем выше (понадобится для ссылки).
 $group_id = preg_replace("/-/i", "", $wall_id);
@@ -87,40 +87,41 @@ $wall = $wall->response->items;
 
 		<div class="nav-bar" >
 			<img src="img/logo.jpg">
-			<div class="header-label" >
-				<div class="logo-text" style="display: inline-block;">НИТАР</div>
+			<div class="header-label" style="position: absolute; padding-left: 7px;">
+				<div class="logo-text" style="display: inline-block; font-size: 60px;">НИТАР</div>
 				<div class="logo-text" style="">Производственная группа</div>
 			</div>
+			
 			<div class="header-phone-number" >
-				<p>Отдел продаж(Москва):</p>
 			    <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
 			</div>
+			<div style="width: 3px; height: 40px; background-color: #ee584a; float: right; margin-top: 30; margin-right: 10"> </div>
 			<div class="header-phone-number">
-				<p>По росии:</p>
-			    <a href="tel:+7(978)XXXXXXX">тел. +7(978)XXXXXXX</a>
+			    <a href="mailto:your@mail.ru">your@mail.ru</a>			    
 			</div>
 		</div>
-		<div class="top-line"  style="">
+	</div>
+		<div class="top-line"  style="position: sticky; top: -1; z-index: 200;">
 			<div class="bar-nav-buttons" >
-				<div class="nav-button">
-					<a href="#">О компании</a>
+				<div class="nav-button" style="box-shadow: 7px 0px 10px -1px #efefef; ">
+					<a href="#">Металообработка</a>
 				</div>
 				<div class="nav-button">
-					<a href="#">О компании</a>
+					<a href="#">Металоконструкции</a>
 				</div>
 				<div class="nav-button">
-					<a href="#">О компании</a>
+					<a href="#">Изделия на заказ</a>
 				</div>
 				<div class="nav-button" >
-					<a href="#">Выполненые работы</a>
+					<a href="#">Машиностроение</a>
 				</div>
-				<div class="nav-button">
-					<a href="#">Контакты</a>	
+				<div class="nav-button" style="box-shadow: -7px 0px 10px -1px #efefef;">
+					<a href="#">More</a>	
 				</div>
 			</div>
 		</div>
 
-	</div>
+	
 	<!--
 	<div id="main_banner" class="demo">
 				<div class="carousel-slide" style="background: url(&quot;img/image1.jpg&quot;) 50% 50% / cover no-repeat; display: none;">
@@ -140,103 +141,156 @@ $wall = $wall->response->items;
 	</div>-->
 
 	<div class="container">
+		<div class="container-first" style=" height: 300px; width: 100%">
+		<div class="container-left" style="height: 300px; float: left;">
+			<div class="container-menu" style="padding-right: 10;">
+				<p style="font-size: 30; margin-bottom: 15px;">О НАС</p>
+				<div class="container-menu-button" style="color:#ee584a;  width: 100%; border-bottom: 1px solid  #efefef; padding:10 0 5 0; margin-bottom: 10">
+					<a href="#">ПГ НИТАР</a>
+				</div>
+				<div class="container-menu-button" style="width: 100%; color:#ee584a; border-bottom: 1px solid  #efefef; padding:10 0 5 0; margin-bottom: 10">
+					<a href="#">НАШЕ ПРОИЗВОДСТВО</a>
+				</div>
+				<div class="container-menu-button" style="width: 100%; color:#ee584a; border-bottom: 1px solid  #efefef; padding:10 0 5 0; margin-bottom: 10">
+					<a href="#">НАШИ КЛИЕНТЫ</a>
+				</div>
+				<div class="container-menu-button" style="width: 100%; color:#ee584a; border-bottom: 1px solid  #efefef; padding:10 0 5 0; margin-bottom: 10">
+					<a href="#">ПАРТНЕРСКАЯ ПРОГРАММА</a>
+				</div>
+				<a href="#">
+					<div class="container-callback" style="height: 40px; width: 100%; background-color: #ee584a; text-align: center; color:  #efefef; border-radius: 3px; padding: 15 0 0 0; box-shadow: 0 0 5px rgba(0,0,0,0.5);">
+						Позвоните нам
+					</div>
+				</a>
+			</div>
+			
+		</div>
+
+		<div class="container-right">
 		<?
 		for ($i = 0; $i < count($wall); $i++) {
 	$a = $wall[$i]->attachments[0]->photo->photo_604;
+
 	echo '
-	<p>'.$wall[$i]->text.'</p>
-<img src='.$a.'>
-<a href="https://vk.com/wall'.$wall[$i]->from_id.'_'.$wall[$i]->id.'">ТЫКОЙ </a>
+<img src='.$a.' style="width:300px; box-shadow: 0 0 5px rgba(0,0,0,0.5);">
+<div style="position:absolute; display:inline-block;  width:240px; height:270; padding:10;">
+<h1 style="height:250px; overflow:hidden;">'.$wall[$i]->text.'</h1>
+<div style="margin-top:5px;">
+<a href="https://vk.com/wall'.$wall[$i]->from_id.'_'.$wall[$i]->id.'">Перейти к записи </a>
+<a href="https://vk.com/club'.$wall[$i]->from_id.'">Подписаться</a>
+</div>
+</div>
+
 ';
 }?>
-		<div class="container-index" style="text-align: center;">
-			<span class="index-up-label">Изготавливаем на заказ</span><br>
+</div>
+</div>
+		<div class="container-index" style="margin-top: 20px; text-align: center; width: 900">
+			<!--<span class="index-up-label" style="font-size: 25px;">Изготавливаем на заказ</span><br>
 			<span class="index-label">Металлоконструкции</span><br>
-			<span class="index-under-label">Производственная компания ООО «ПЗО» гарантирует качественное предоставление услуг по обработке металлов. С помощью современного оборудования мы готовы произвести детали любого размера и уровня сложности по приемлемым ценам.</span><br>
-			<div class="index-services-1" style="width: 100%; text-align:center;">
-				<div class="services-1-img" style="display: inline-block; width: 270px; height: 200px; margin-right: 10;">
-					<img src="/img/image1.jpg" style="width: 100%;">
-					<div class="index-service-label" style="position: relative;
-    background: white;
-    width: fit-content;
-    padding: 5 10;
-    bottom: 31px;
-    border: 1px solid black;
-    background-color: white;">
-						<span>
-							ntrcngh
-						</span>
-					</div>
-
-				</div>	
-				<div class="services-1-img" style="display: inline-block; width: 270px; height: 200px; margin-right: 10;">
-					<img src="/img/image1.jpg" style="width: 100%;">
-					<div class="index-service-label" style="position: relative;
-    background: white;
-    width: fit-content;
-    padding: 5 10;
-    bottom: 31px;
-    border: 1px solid black;
-    background-color: white;">
-						<span>
-							ntrcngh
-						</span>
-					</div>
-
-				</div>
-				<div class="services-1-img" style="display: inline-block; width: 270px; height: 200px; margin-right: 10;">
-					<img src="/img/image1.jpg" style="width: 100%;">
-					<div class="index-service-label" style="position: relative;
-    background: white;
-    width: fit-content;
-    padding: 5 10;
-    bottom: 31px;
-    border: 1px solid black;
-    background-color: white;">
-						<span>
-							ntrcngh
-						</span>
-					</div>
-
-				</div>
-				
-				
-			</div>
-			<p>aasdfg</p>
-			<div class="index-services-2" style="width: 100%; text-align:center;">
+			<span class="index-under-label">Производственная компания ООО «ПЗО» гарантирует качественное предоставление услуг по обработке металлов. С помощью современного оборудования мы готовы произвести детали любого размера и уровня сложности по приемлемым ценам.</span><br>-->
+			
+			<div class="index-services-3" style="width: 100%; text-align:center; margin-top: 10px;">
 				<a href="#"><!--вставить ссылки--> 
-				<div class="services-2-img" style="display: inline-block; width: 270px; height: 200px; margin-right: 10;">
-					<img src="/img/image1.jpg" style="width: 100%;">
-					<div class="index-service-label" style="text-align: center;
-    padding: 5 10;">
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/polish.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
 						<span>
-							ntrcngh
+							Шлифовка металла
 						</span>
 					</div>
 
 				</div>	
 				</a>
-			
-			</div>
-			<p>waesgfhjkljhgfda</p>
-			<div class="index-services-3" style="width: 100%; text-align:center;">
 				<a href="#"><!--вставить ссылки--> 
-				<div class="services-3-img" style="display: inline-block; position: relative; width: 270px; height: 200px; margin-right: 10;">
-					<img src="/img/image1.jpg" style="width: 100%;">
-					<div class="index-service-label" style="    text-align: center;
-    position: relative;
-    padding: 5 10;
-    bottom: 30px;
-    background-color: rgba(100,100,100,0.9);
-    border: 1px solid black;">
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/welding.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
 						<span>
-							ntrcngh
+							Сварка металла
 						</span>
 					</div>
 
 				</div>	
 				</a>
-			
+				<a href="#"><!--вставить ссылки--> 
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/drilling.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
+						<span>
+							Сверление металла
+						</span>
+					</div>
+
+				</div>	
+				</a>
+				<a href="#"><!--вставить ссылки--> 
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/cutting.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
+						<span>
+							Резка металла
+						</span>
+					</div>
+
+				</div>	
+				</a>
+				<a href="#"><!--вставить ссылки--> 
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/metal-dest.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
+						<span>
+							Гибка листового металла
+						</span>
+					</div>
+
+				</div>	
+				</a>
+				<a href="#"><!--вставить ссылки--> 
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/rolling.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
+						<span>
+							Вальцовка металла
+						</span>
+					</div>
+
+				</div>	
+				</a>
+				<a href="#"><!--вставить ссылки--> 
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/zxchto.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
+						<span>
+							?????????????
+						</span>
+					</div>
+
+				</div>	
+				</a>
+				<a href="#"><!--вставить ссылки--> 
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/wanish.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
+						<span>
+							?????????????
+						</span>
+					</div>
+
+				</div>	
+				</a>
+				<a href="#"><!--вставить ссылки--> 
+				<div class="services-3-img" style="display: inline-block; position: relative; width: 275px; height: 115px; margin: 25 5;">
+					<img src="/img/painted.png" style="width: 100%;">
+					<div class="index-service-label" style="text-align: center; padding: 10 10; color: #4f4f4f;background-color: #efefef;">
+						<span>
+							?????????????
+						</span>
+					</div>
+
+				</div>	
+				</a>
+							
 			</div>
 		</div>
 
@@ -257,8 +311,8 @@ $wall = $wall->response->items;
 <input type="checkbox"   name="1" id="1" value="Gthyj">
 <input type="checkbox"   name="2" id="2" value="Gthyasdfgj">
 
-        <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" required/>
-        <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" required/>
+        <input id="name" type="text" name="name" placeholder="Введите ваше имя" maxlength="30" autocomplete="off" requi#ee584a/>
+        <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" requi#ee584a/>
         <input id="button" type="button"  value="Заказать обратный звонок" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>
     </form>-->
    </div>
@@ -281,12 +335,12 @@ $wall = $wall->response->items;
     });
 });
 </script>
-	<script type='text/javascript'>
+	<!--<script type='text/javascript'>
 (function(){ var widget_id = 'Ytpug8MdWW';var d=document;var w=window;function l(){
   var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
   s.src = '//code.jivosite.com/script/widget/'+widget_id
     ; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
   if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
   else{w.addEventListener('load',l,false);}}})();
-</script>
+</script>-->
 </body>
